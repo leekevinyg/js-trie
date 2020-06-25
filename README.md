@@ -21,7 +21,7 @@ A typescript implementation of the Prefix Trie data structure.
 
 const {  Trie  } = require('js-trie');
 
-let trie : Trie = new Trie();
+let trie = new Trie();
 
 trie.insert("apple");
 trie.search("apple");   // returns true
