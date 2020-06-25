@@ -1,22 +1,10 @@
-interface ITrieNode {
-    keys : { [key: string] : TrieNode };
-    end : boolean;
-}
+import { TrieNode } from './TrieNode';
 
 interface ITrie {
     root : TrieNode;
     startsWith(prefix : string) : boolean;
     insert(word : string, node? : TrieNode) : void;
     search(word : string) : boolean;
-}
-
-class TrieNode implements ITrieNode {
-    keys : { [key: string] : TrieNode };
-    end : boolean;
-    constructor() {
-        this.keys = {};
-        this.end = false;
-    }
 }
 
 export default class Trie implements ITrie {
@@ -62,4 +50,3 @@ export default class Trie implements ITrie {
         return true;
     }
 }
-
