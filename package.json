@@ -1,14 +1,19 @@
 {
   "name": "js-trie",
   "version": "0.0.1",
-  "description": "auto complete dropdown options backed by a trie",
-  "main": "index.ts",
+  "description": "typescript implementation of the prefix trie data structure",
+  "main": "dist/Trie.ts",
+  "module": "dist/Trie.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "npm run test"
+    "test": "mocha -require ts-node/register ./test/**/*.ts",
+    "coverage": "nyc --reporter=text mocha -require ts-node/register ./test/**/*.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leekevinyg/js-autocomplete-options.git"
+    "url": "git+https://github.com/leekevinyg/js-trie.git"
   },
   "keywords": [
     "javascript",
@@ -18,16 +23,7 @@
   "author": "Kevin Lee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leekevinyg/js-autocomplete-options/issues"
+    "url": "https://github.com/leekevinyg/js-trie/issues"
   },
-  "homepage": "https://github.com/leekevinyg/js-autocomplete-options#readme",
-  "devDependencies": {
-    "@types/chai": "^4.2.11",
-    "@types/mocha": "^7.0.2",
-    "@types/node": "^14.0.14",
-    "chai": "^4.2.0",
-    "mocha": "^8.0.1",
-    "nyc": "^15.1.0",
-    "ts-node": "^8.10.2"
-  }
+  "homepage": "https://github.com/leekevinyg/js-trie#readme"
 }

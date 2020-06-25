@@ -1,6 +1,6 @@
 # JS Trie
 
-A javascript implementation of a the Prefix Trie data structure.
+A typescript implementation of the Prefix Trie data structure.
 
 [![Build Status](https://travis-ci.com/leekevinyg/js-priority-queue.svg?branch=master)](https://travis-ci.com/leekevinyg/js-priority-queue)
 [![Coverage Status](https://coveralls.io/repos/github/leekevinyg/js-priority-queue/badge.svg)](https://coveralls.io/github/leekevinyg/js-priority-queue)
@@ -22,7 +22,7 @@ A javascript implementation of a the Prefix Trie data structure.
 
 const {  Trie  } = require('js-trie');
 
-let trie = new Trie();
+let trie : Trie = new Trie();
 
 trie.insert("apple");
 trie.search("apple");   // returns true
@@ -38,11 +38,14 @@ trie.search("app");     // returns true
 
 The library exposes the following functions:
 
-* **insert(word : string)**
+* **insert(word : string) : void**
+
 Inserts an word into the prefix trie
 
 * **search(word : string) : boolean**
+
 Returns true if the ```word``` exists in the prefix trie, otherwise false.
 
-* **startsWith(part : string) : boolean**
+* **startsWith(prefix : string) : boolean**
+
 Returns true if there exists a word that starts with ```part```, otherwise false.
