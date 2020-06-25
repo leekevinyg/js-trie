@@ -3,7 +3,7 @@
 A typescript implementation of the Prefix Trie data structure.
 
 [![Build Status](https://travis-ci.com/leekevinyg/js-trie.svg?branch=master)](https://travis-ci.com/leekevinyg/js-trie)
-[![Coverage Status](https://coveralls.io/repos/github/leekevinyg/js-priority-queue/badge.svg)](https://coveralls.io/github/leekevinyg/js-priority-queue)
+[![Coverage Status](https://coveralls.io/repos/github/leekevinyg/js-trie/badge.svg?branch=master)](https://coveralls.io/github/leekevinyg/js-trie?branch=master)
 [![npm version](https://badge.fury.io/js/vanilla-priority-queue.svg)](https://badge.fury.io/js/vanilla-priority-queue)
 
 - <a href="#Installation">Installation</a>
