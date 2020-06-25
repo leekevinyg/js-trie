@@ -1,4 +1,4 @@
-import Trie from '../src/Trie';
+import { Trie } from '../dist/Trie';
 import { expect } from 'chai';
 
 describe('Prefix Trie', () => {

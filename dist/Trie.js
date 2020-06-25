@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Trie = void 0;
 const TrieNode_1 = require("./TrieNode");
 class Trie {
     constructor() {
@@ -47,4 +48,4 @@ class Trie {
         return true;
     }
 }
-exports.default = Trie;
+exports.Trie = Trie;

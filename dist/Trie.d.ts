@@ -5,7 +5,7 @@ interface ITrie {
     insert(word: string, node?: TrieNode): void;
     search(word: string): boolean;
 }
-export default class Trie implements ITrie {
+export declare class Trie implements ITrie {
     root: TrieNode;
     constructor();
     insert(word: string, node?: TrieNode): void;
