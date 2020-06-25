@@ -24,9 +24,9 @@ export class Trie implements ITrie {
         }
     }
     search(word: string): boolean {
-        let node = this.root;
+        let node : TrieNode = this.root;
         while (word.length > 0) {
-            let nextLetter = word[0];
+            let nextLetter : string = word[0];
             if (node.keys[nextLetter]) {
                 node = node.keys[nextLetter];
                 word = word.substr(1);
@@ -37,9 +37,9 @@ export class Trie implements ITrie {
         return node.end;
     }
     startsWith(prefix: string): boolean {
-        let node = this.root;
+        let node : TrieNode = this.root;
         while (prefix.length > 0) {
-            let nextLetter = prefix[0];
+            let nextLetter : string = prefix[0];
             if (node.keys[nextLetter]) {
                 node = node.keys[nextLetter];
                 prefix = prefix.substr(1);
