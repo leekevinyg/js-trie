@@ -1,13 +1,13 @@
 interface ITrieNode {
-    keys : TrieNode[];
+    keys : { [key: string] : TrieNode };
     end : boolean;
 }
 
 export class TrieNode implements ITrieNode {
-    keys : TrieNode[];
+    keys : { [key: string] : TrieNode };
     end : boolean;
     constructor() {
-        this.keys = [];
+        this.keys = {};
         this.end = false;
     }
 }
