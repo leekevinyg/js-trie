@@ -19,7 +19,7 @@ A typescript implementation of the Prefix Trie data structure.
 
 ```
 
-const {  Trie  } = require('js-trie');
+const Trie = require('js-trie');
 
 let trie = new Trie();
 

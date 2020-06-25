@@ -1,4 +1,7 @@
-import { TrieNode } from './TrieNode';
+interface ITrieNode {
+    keys : { [key: string] : TrieNode };
+    end : boolean;
+}
 
 interface ITrie {
     root : TrieNode;
@@ -7,7 +10,16 @@ interface ITrie {
     search(word : string) : boolean;
 }
 
-export class Trie implements ITrie {
+class TrieNode implements ITrieNode {
+    keys : { [key: string] : TrieNode };
+    end : boolean;
+    constructor() {
+        this.keys = {};
+        this.end = false;
+    }
+}
+
+export default class Trie implements ITrie {
     root : TrieNode;
     constructor() {
         this.root = new TrieNode();
