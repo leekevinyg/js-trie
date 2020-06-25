@@ -1,6 +1,6 @@
 {
   "name": "js-trie",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "typescript implementation of the prefix trie data structure",
   "main": "dist/Trie.ts",
   "module": "dist/Trie.ts",
