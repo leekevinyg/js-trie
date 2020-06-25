@@ -25,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/leekevinyg/js-trie/issues"
   },
-  "homepage": "https://github.com/leekevinyg/js-trie#readme"
+  "homepage": "https://github.com/leekevinyg/js-trie#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.5",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.0",
+    "typescript": "^3.7.2"
+  }
 }

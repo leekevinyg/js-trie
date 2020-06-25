@@ -3,7 +3,7 @@ import { TrieNode } from './TrieNode';
 interface ITrie {
     root : TrieNode;
     startsWith(prefix : string) : boolean;
-    insert(word : string) : void;
+    insert(word : string, node? : TrieNode) : void;
     search(word : string) : boolean;
 }
 
@@ -12,14 +12,42 @@ export class Trie implements ITrie {
     constructor() {
         this.root = new TrieNode();
     }
-    insert(word: string): void {
-        throw new Error("Method not implemented.");
-    }
-    startsWith(prefix: string): boolean {
-        throw new Error("Method not implemented.");
+    insert(word: string, node = this.root): void {
+        if (word.length === 0) {
+            node.end = true;
+            return;
+        } else if (node.keys[word[0]]) {
+            return this.insert(word.substr(1), node.keys[word[0]]);
+        } else {
+            node.keys[word[0]] = new TrieNode();
+            return this.insert(word.substr(1), node.keys[word[0]]);
+        }
     }
     search(word: string): boolean {
-        throw new Error("Method not implemented.");
+        let node = this.root;
+        while (word.length > 0) {
+            let nextLetter = word[0];
+            if (node.keys[nextLetter]) {
+                node = node.keys[nextLetter];
+                word = word.substr(1);
+            } else {
+                return false;
+            }
+        }
+        return node.end;
+    }
+    startsWith(prefix: string): boolean {
+        let node = this.root;
+        while (prefix.length > 0) {
+            let nextLetter = prefix[0];
+            if (node.keys[nextLetter]) {
+                node = node.keys[nextLetter];
+                prefix = prefix.substr(1);
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
