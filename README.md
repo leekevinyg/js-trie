@@ -39,7 +39,7 @@ The library exposes the following functions:
 
 * **insert(word : string) : void**
 
-Inserts an word into the prefix trie
+Inserts a word into the prefix trie
 
 * **search(word : string) : boolean**
 
