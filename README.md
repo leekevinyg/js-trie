@@ -43,8 +43,8 @@ Inserts a word into the prefix trie
 
 * **search(word : string) : boolean**
 
-Returns true if the ```word``` exists in the prefix trie, otherwise false.
+Returns ```true``` if the ```word``` exists in the prefix trie, otherwise ```false```.
 
 * **startsWith(prefix : string) : boolean**
 
-Returns true if there exists a word that starts with ```part```, otherwise false.
+Returns ```true``` if there exists a word that starts with ```part```, otherwise ```false```.
